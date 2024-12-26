@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us</title>
+  
+</head>
+<body>
+<%= render partial: "header"%>
+  <section class="services">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-6 col-md-12">
+          <div class="left">
+            <%= image_tag "modular-kitchen.webp", class: "img-fluid w-100" %>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <div class="right">
+            <h4>Modular Kitchen</h4>
+            <p>Transform your culinary space with Chic Nest Interior’s bespoke modular kitchen solutions. We specialize in creating functional and stylish kitchens tailored to your specific needs. Our designs blend modern aesthetics with practical storage solutions, using high-quality materials and craftsmanship to ensure durability and elegance in every detail.</p>
+            <a href="https://wa.link/c18okf" class="black-btn">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12">
+          <div class="left">
+            <%= image_tag "wordrobes.webp", class: "img-fluid w-100" %>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <div class="right">
+            <h4>Wardrobes</h4>
+            <p>Discover Chic Nest Interior's custom wardrobe solution designed to maximize space and organization in your home. Weather you prefer contemporary sleak design or classic styles, our wardrobes are crafted with precision and attention to detail. We offer a range of materials and finishes to complement your interior decor while providing efficient storage solutions.</p>
+
+            <a href="https://wa.link/c18okf" class="black-btn">Contact Us</a>
+          </div>
+        </div>
+
+        <div class="col-lg-6 col-md-12">
+          <div class="left">
+            <%= image_tag "led-panel.jpg", class: "img-fluid w-100" %>
+          </div>
+        </div>
+        <div class="col-lg-6 col-md-12">
+          <div class="right">
+            <h4>Led Panels</h4>
+            <p>Our multifaceted TV units bring life to a room. You can integrate a bookshelf, a CD rack, a video game unit or just for art. With our TV units, you can design the entertainment unit of your dream home just the way you want, made to suit your needs.</p>
+            <a href="https://wa.link/c18okf" class="black-btn">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="brand">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12">
+          <h3>Our Partners Brands</h3>
+        </div>
+        <div class="col-md-12">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <div class="logoBox">
+                <%= image_tag "Hettich-Logo.png" %>
+              </div>
+            </div>
+            <div class="item">
+              <div class="logoBox">
+                <%= image_tag "Untitled-design.jpg" %>
+              </div>
+            </div>
+            <div class="item">
+              <div class="logoBox">
+                <%= image_tag "01.jpg" %>
+              </div>
+            </div>
+            <div class="item">
+              <div class="logoBox">
+                <%= image_tag "Untitled-design04.jpg" %>
+              </div>
+            </div>
+            <div class="item">
+              <div class="logoBox">
+                <%= image_tag "Untitled-design033.jpg" %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-md-12">
+          <h3>Machine Gallery</h3>
+        </div>
+        <div class="col-md-12">
+          <div class="owl-carousel owl-theme">
+            <div class="item">
+              <%= image_tag "machine.jpg" %>
+            </div>
+            <div class="item">
+              <%= image_tag "machine.jpg" %>
+            </div>
+            <div class="item">
+              <%= image_tag "machine.jpg" %>
+            </div>
+            <div class="item">
+              <%= image_tag "machine.jpg" %>
+            </div>
+            <div class="item">
+              <%= image_tag "machine.jpg" %>
+            </div>
+            <div class="item">
+              <%= image_tag "machine.jpg" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <script>
+    $(document).ready(function() {
+      $('.brand .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 20,
+        responsiveClass: true,
+        nav:false,
+        dots:true,
+        responsive: {
+          0: {
+            items: 1,
+            margin:0,
+          },
+          600: {
+            items: 3,
+          },
+          1000: {
+            items: 4,
+          }
+        }
+      })
+    });
+
+    $(document).ready(function() {
+      $('.gallery .owl-carousel').owlCarousel({
+        loop: true,
+        margin: 30,
+        responsiveClass: true,
+        nav:false,
+        dots:true,
+        responsive: {
+          0: {
+            items: 1,
+            margin:0,
+          },
+          600: {
+            items: 2,
+          },
+          1000: {
+            items: 2,
+          }
+        }
+      })
+    })
+  </script>
+</body>
+</html>

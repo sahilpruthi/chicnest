@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link  rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<%= render partial: "header"%>
+<section class="contact">
+  <div class="container">
+    <div class="row">
+      <!-- Contact Information -->
+      <div class="col-md-6">
+        <div class="left">
+          <h3>Local Address</h3>
+          <div class="mb-5">
+            <ul>
+              <li><strong>Address:</strong> Greater Noida</li>
+              <li><strong>Phone:</strong> +91 9416094164</li>
+              <li><strong>Email:</strong> chicnestinterior@gmail.com</li>
+            </ul>
+          </div>
+          <h3>Email & Phone</h3>
+          <div>
+            <ul>
+              <li><strong>Email:</strong> chicnestinterior@gmail.com</li>
+              <li><strong>Phone:</strong> +91 9416094164</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-md-6">
+        <div class="right">
+          <h3>Get in Touch with Us</h3>
+          <%= simple_form_for @contact, url:  create_contact_homes_path , method: :post do |f| %>
+            <div class="row g-3">
+              <div class="col-md-12">
+                <div class="form-group">
+                  <%= f.label :name, "Name" %>
+                  <%= f.input :name, placeholder: "Name", input_html: { class: "form-control" }, label: false %>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <%= f.label :phone, "Phone" %>
+                  <%= f.input :phone, placeholder: "Phone Number", pattern:"[0-9]",  input_html: { class: "form-control" }, label: false %>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <%= f.label :email, "Email" %>
+                  <%= f.input :email, placeholder: "Email", input_html: { class: "form-control" }, label: false %>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <div class="form-group">
+                  <%= f.label :message, "Message" %>
+                  <%= f.input :message, as: :text, placeholder: "Message", input_html: { class: "form-control", rows: 4 }, label: false %>
+                </div>
+              </div>
+              <div class="col-md-12">
+                <%= f.button :submit, "Submit", class: "black-btn" %>
+              </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.min.js"></script>
+</body>
+</html>

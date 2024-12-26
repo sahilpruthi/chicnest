@@ -1,0 +1,210 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.black-btn{
+    background: #000 !important;
+    border: 0 !important;
+    outline: 0;
+    color: #fff !important;
+    padding: 14px 20px !important;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+}
+
+.contact{
+    padding: 4rem 0;
+}
+
+.contact form label{
+    margin-bottom: 5px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contact form input{
+    height: 50px;
+}
+
+.contact h3{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #000;
+    padding-left: 40px;
+    position: relative;
+}
+
+.contact h3::before{
+    background: #000;
+    height: 1px;
+    width: 30px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    position: absolute;
+}
+
+.contact ul{
+    padding-left: 3.8rem;
+}
+
+
+.abt-us{
+    padding: 4rem 0;
+}
+
+.abt-us .right{
+    padding-left: 40px;
+}
+
+.abt-us .right h4{
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #000;
+    padding-left: 40px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.abt-us .right h4::before{
+    background: #000;
+    height: 1px;
+    width: 30px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    position: absolute;
+}
+
+.abt-us p{
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #000;
+    margin-bottom: 20px;
+}
+
+.brand{
+    padding: 4rem 0;
+}
+
+.brand h3{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #000;
+    padding-left: 40px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.brand h3::before{
+    background: #000;
+    height: 1px;
+    width: 30px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    position: absolute;
+}
+
+.brand .item .logoBox{
+    border: 1px solid #ddd;
+    padding: 40px 20px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.brand .item .logoBox img{
+    width: 150px;
+    height: 70px;
+    object-fit: contain;
+    margin: 0 auto;
+}
+
+.owl-carousel .owl-dots{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.owl-carousel .owl-dot span{
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    border-radius: 50%;
+    display: block;
+}
+
+.owl-carousel .owl-dot.active span{
+    background: #000;
+}
+
+.gallery{
+    padding: 4rem 0;
+    background: #ebebe8;
+}
+
+.gallery h3{
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #000;
+    padding-left: 40px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.gallery h3::before{
+    background: #000;
+    height: 1px;
+    width: 30px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    content: '';
+    position: absolute;
+}
+
+@media (min-width:768px) and (max-width:991px){
+    .abt-us .right {
+        padding-left: 0px;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width:767px){
+    .contact .right{
+        margin-top: 50px;
+    }
+    .abt-us .right {
+        padding-left: 0px;
+        margin-top: 40px;
+    }
+}
